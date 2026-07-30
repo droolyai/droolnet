@@ -1,0 +1,42 @@
+{
+  "name": "wokenet",
+  "version": "0.0.0",
+  "private": true,
+  "description": "WokeNet — the sovereign protocol and network powering WokeSocial, with the middle-out compression program at its core.",
+  "license": "MIT",
+  "homepage": "https://woke.social",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlexBTC420/wokenet.git"
+  },
+  "packageManager": "pnpm@11.2.2",
+  "engines": {
+    "node": "22.23.1",
+    "pnpm": "11.2.2"
+  },
+  "scripts": {
+    "bench": "pnpm --filter @wokenet/middle-out bench",
+    "build": "TURBO_TELEMETRY_DISABLED=1 turbo run build",
+    "clean": "TURBO_TELEMETRY_DISABLED=1 turbo run clean",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "lint": "eslint . --max-warnings 0",
+    "test": "TURBO_TELEMETRY_DISABLED=1 turbo run test",
+    "test:coverage": "TURBO_TELEMETRY_DISABLED=1 turbo run test:coverage",
+    "typecheck": "TURBO_TELEMETRY_DISABLED=1 turbo run typecheck",
+    "verify": "pnpm format:check && pnpm lint && pnpm typecheck && pnpm test && pnpm build"
+  },
+  "devDependencies": {
+    "@eslint/js": "9.39.5",
+    "@types/node": "22.20.1",
+    "@vitest/coverage-v8": "4.1.10",
+    "eslint": "9.39.5",
+    "eslint-config-prettier": "10.1.8",
+    "globals": "17.8.0",
+    "prettier": "3.9.6",
+    "turbo": "2.10.7",
+    "typescript": "6.0.3",
+    "typescript-eslint": "8.65.0",
+    "vitest": "4.1.10"
+  }
+}

@@ -1,0 +1,12 @@
+packages:
+  - packages/*
+
+autoInstallPeers: false
+engineStrict: true
+linkWorkspacePackages: true
+nodeVersion: 22.23.1
+preferWorkspacePackages: true
+savePrefix: ''
+sharedWorkspaceLockfile: true
+strictPeerDependencies: true
+updateNotifier: false

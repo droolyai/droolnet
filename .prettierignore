@@ -1,0 +1,13 @@
+.local/
+.turbo/
+coverage/
+dist/
+node_modules/
+pnpm-lock.yaml
+
+# Documentation is maintained independently and is not rewritten by code formatting.
+README.md
+docs/
+
+# Generated measurement reports keep the exact bytes the harness wrote.
+packages/middle-out/BENCHMARK.md

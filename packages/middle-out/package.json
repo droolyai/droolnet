@@ -1,0 +1,36 @@
+{
+  "name": "@wokenet/middle-out",
+  "version": "0.1.0",
+  "private": false,
+  "description": "Middle-out compression: typed middle-representation transcoding and content-defined chunking for WokeNet protocol data and decentralized media",
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/src/index.d.ts",
+      "import": "./dist/src/index.js"
+    },
+    "./chunking": {
+      "types": "./dist/src/chunking.d.ts",
+      "import": "./dist/src/chunking.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "clean": "rm -rf dist coverage",
+    "lint": "eslint src test scripts",
+    "bench": "node --experimental-strip-types scripts/benchmark.ts",
+    "test": "vitest run --exclude 'dist/**'",
+    "test:coverage": "vitest run --coverage --exclude 'dist/**'",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "bs58": "6.0.0"
+  },
+  "devDependencies": {
+    "vitest": "4.1.10"
+  }
+}

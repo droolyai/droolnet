@@ -1,0 +1,57 @@
+# Operating systems and editors
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+*.swp
+*~
+
+# Local environment and credentials
+.env
+.env.*
+!.env.example
+*.keypair.json
+*.pem
+*.p12
+*.pfx
+*.seed
+
+# Node, pnpm, Turbo, Next.js, and tests
+node_modules/
+.pnpm-store/
+.expo/
+.turbo/
+.next/
+out/
+dist/
+coverage/
+playwright-report/
+test-results/
+*.tsbuildinfo
+*.log
+debug.log*
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Rust, Anchor, and Solana local state
+target/
+.anchor/
+test-ledger/
+ledger/
+
+# Local infrastructure state
+.local/
+infra/data/
+infra/.state/
+
+# Generated artifacts and temporary files
+.cache/
+.tmp/
+tmp/
+*.pid
+*.pid.lock
+.vercel/
