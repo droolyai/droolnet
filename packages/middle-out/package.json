@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": false,
   "description": "Middle-out compression: typed middle-representation transcoding and content-defined chunking for WokeNet protocol data and decentralized media",
-  "license": "MIT",
+  "license": "SEE LICENSE IN LICENSE",
   "type": "module",
   "exports": {
     ".": {

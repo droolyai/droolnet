@@ -50,4 +50,20 @@ fallback), not hoped for.
 
 ## License
 
-MIT, unless a file or package states otherwise.
+**Source-available dual license — not OSI open source.**
+
+| Track | Rights | Cost |
+| --- | --- | --- |
+| **Section A** | Read, audit, test, benchmark, non-commercial evaluation, security research | Free |
+| **Section B** | Production, SaaS, commercial redistribution, government operational use | **Paid** |
+
+- Full legal text: [`LICENSE`](LICENSE)
+- How to buy production rights: [`COMMERCIAL_LICENSE.md`](COMMERCIAL_LICENSE.md)
+- Short banner: [`NOTICE`](NOTICE)
+
+Transparency and validation are free. Production and government operational use
+require a written Section B license. Historical MIT snapshots remain under MIT
+for recipients who obtained them while MIT applied; **current default-branch
+code is dual-licensed.**
+
+By contributing, you accept the CLA terms in [`LICENSE`](LICENSE).

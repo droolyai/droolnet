@@ -1,21 +1,189 @@
-MIT License
+WOKENET — SOURCE-AVAILABLE DUAL LICENSE
+Copyright (c) 2026 Raphael Cardona (publishing as AlexBTC420 / Pinkman, Inc.).
+All rights reserved, except for the limited public grant in Section A.
 
-Copyright (c) 2026 WokeSocial contributors
+================================================================================
+IMPORTANT — THIS IS NOT AN OSI “OPEN SOURCE” LICENSE
+================================================================================
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+True open-source licenses (MIT, Apache-2.0, GPL, AGPL, etc.) allow anyone —
+including commercial vendors and the U.S. Government — to run, modify, and
+often sell the software free of charge.
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+That is intentionally NOT the arrangement for WokeNet.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+This repository is SOURCE-AVAILABLE under a STRICT dual license designed for:
+
+  • VALIDATION & TRANSPARENCY — anyone can read, audit, test, and verify
+  • VALUE CAPTURE — commercial and government production use requires payment
+
+  (A) Limited Non-Commercial Evaluation & Audit License  — free, narrow
+  (B) Commercial & Government Production License         — paid / written
+
+If you need rights broader than Section A, you must obtain Section B.
+There is no implied production license from GitHub visibility.
+
+================================================================================
+LEGACY NOTICE (MIT SUPERSESSION)
+================================================================================
+
+Earlier commits in this repository were published under the MIT License.
+Code obtained under MIT while MIT applied remains usable under those MIT
+terms for that historical snapshot. This dual license governs THIS version
+and subsequent versions on the default branch unless a file states otherwise.
+The copyright holder does not dedicate current or future work to MIT.
+
+================================================================================
+SECTION A — LIMITED NON-COMMERCIAL EVALUATION, AUDIT & RESEARCH LICENSE
+================================================================================
+
+Subject to the conditions below, the copyright holder grants you a worldwide,
+royalty-free, non-exclusive, non-transferable, revocable license to:
+
+  1. Download, view, and study the source code and documentation;
+  2. Build and run the software for non-commercial evaluation, local
+     development, education, academic research, and security research;
+  3. Run the project's test suites and reproduce published benchmarks;
+  4. Share UNMODIFIED copies of the source for non-commercial audit or
+     peer review, with attribution and this LICENSE attached;
+  5. Submit contributions (issues / pull requests) under the contribution
+     terms below;
+  6. Link to the official repository: https://github.com/AlexBTC420/wokenet
+
+…provided that ALL of the following conditions are met:
+
+  (a) ATTRIBUTION. Retain copyright notices and this LICENSE. Credit:
+      “WokeNet — © Raphael Cardona (AlexBTC420)” with link to https://github.com/AlexBTC420/wokenet.
+
+  (b) NON-COMMERCIAL ONLY. You may not use the software (or substantial
+      portions) for commercial advantage or monetary compensation without
+      Section B. Prohibited without Section B (non-exhaustive):
+        • production SaaS / multi-tenant hosting;
+        • selling access, seats, support bundles, or managed instances;
+        • embedding in a paid product, marketplace listing, or app store
+          binary offered for a fee;
+        • commercial consulting deliverables that redistribute this code
+          as a core work product to paying clients;
+        • token, NFT, or investment products branded on this codebase.
+
+  (c) NO PRODUCTION USE AT SCALE WITHOUT SECTION B.
+      “Production use” means operating the software to serve real end users
+      (other than yourself for personal non-commercial use), process real
+      customer data, or run a public network service. Personal single-user
+      non-commercial experimentation is allowed under Section A.
+
+  (d) NO GOVERNMENT / PUBLIC-SECTOR PRODUCTION WITHOUT SECTION B.
+      Any government, military, intelligence community, public agency,
+      national lab, international organization, or contractor performing
+      for such an entity that deploys this software in an operational,
+      production, training-at-scale, or mission system requires Section B.
+      Reading and security research are not production use.
+
+  (e) NO PUBLIC COMPETING FORKS AS SUBSTITUTE PRODUCTS without Section B.
+      You may not publish a modified public distribution that is offered as
+      a drop-in replacement product, hosted service, or rebranded protocol
+      stack without a Section B license. Private forks for personal
+      evaluation are allowed under Section A.
+
+  (f) NO REMOVAL OF VALIDATION AFFORDANCES. You may not strip license
+      notices, copyright headers, or NOTICE files from redistributed copies.
+
+  (g) NO INVESTMENT SOLICITATION. Do not present this repository as a
+      securities offering, guaranteed-return product, or token sale vehicle.
+
+  (h) NO ENDORSEMENT. Do not imply endorsement by the copyright holder.
+
+  (i) THIRD-PARTY COMPONENTS. Dependencies retain their own licenses
+      (MIT, Apache-2.0, etc.). Section A/B govern only first-party
+      WokeNet materials.
+
+NO OTHER RIGHTS ARE GRANTED UNDER SECTION A. All rights not expressly
+granted are reserved.
+
+================================================================================
+SECTION B — COMMERCIAL & GOVERNMENT PRODUCTION LICENSE (PAID)
+================================================================================
+
+A separate written Commercial & Government Production License is REQUIRED for
+any use outside Section A, including without limitation:
+
+  • production deployment (public or private) serving users or customers;
+  • commercial hosting, SaaS, managed service, or paid support productization;
+  • government / public-sector operational or mission use;
+  • redistribution of modified versions as a product or protocol offering;
+  • OEM / white-label / embedded commercial distribution;
+  • any use for commercial advantage not covered by Section A.
+
+Section B licenses may include (negotiated):
+
+  • scope (startup, enterprise, agency, multi-agency, worldwide SaaS);
+  • seat / MAU / node / revenue share pricing;
+  • source escrow, updates, and security-response SLAs;
+  • trademark and branding terms (separate from copyright);
+  • audit rights and compliance reporting;
+  • optional exclusivity (never default; premium only).
+
+HOW TO LICENSE
+
+  1. Open a GitHub issue titled: “Commercial / Government License Request”
+     on https://github.com/AlexBTC420/wokenet/issues/new
+  2. Or contact the copyright holder via https://github.com/AlexBTC420
+
+  Include: legal entity name, use case, production scale, territory, duration,
+  whether modification/redistribution is required, and procurement constraints.
+
+Until a signed Section B agreement is in effect, Section A is your only grant.
+
+U.S. GOVERNMENT NOTE
+
+Publication on GitHub is not a public-domain dedication and is not a free
+license to the United States. Federal production use requires a negotiated
+Section B instrument consistent with applicable procurement law.
+Ideas and interfaces may be reimplemented independently; this license governs
+the copyrighted source, documentation, and other first-party expression here.
+
+================================================================================
+CONTRIBUTIONS (CLA)
+================================================================================
+
+By submitting a contribution (code, docs, tests, designs, or other material)
+you agree:
+
+  1. You have the right to submit it;
+  2. You assign to Raphael Cardona all copyright in the contribution to the
+     maximum extent permitted by law; OR if assignment is invalid, you grant a
+     perpetual, irrevocable, worldwide, exclusive, royalty-free license to use,
+     reproduce, modify, sublicense, and commercialize the contribution under
+     Section A and Section B (including paid licenses);
+  3. You waive assertion of moral rights to the extent waivable;
+  4. You represent the contribution is your original work or you have rights
+     sufficient for the above (with third-party notices preserved).
+
+Do not contribute if you cannot accept these terms.
+Contributing does NOT grant you a free Section B production license.
+
+================================================================================
+DISCLAIMER
+================================================================================
+
+THE SOFTWARE AND DOCUMENTATION ARE PROVIDED “AS IS,” WITHOUT WARRANTY OF ANY
+KIND, EXPRESS OR IMPLIED, INCLUDING MERCHANTABILITY, FITNESS FOR A PARTICULAR
+PURPOSE, AND NONINFRINGEMENT. IN NO EVENT SHALL THE COPYRIGHT HOLDER BE LIABLE
+FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY ARISING FROM USE OF THE SOFTWARE.
+THIS IS NOT FINANCIAL, LEGAL, OR INVESTMENT ADVICE AND IS NOT A TOKEN OFFERING.
+
+================================================================================
+INTERPRETATION
+================================================================================
+
+  • Prefer construction that preserves dual-license intent: free audit and
+    non-commercial evaluation; paid production, commercial, and government use.
+  • Unenforceable provisions sever; remainder continues.
+  • Failure to enforce is not waiver.
+  • Product description: WokeNet sovereign protocol research, middle-out compression program, and related materials
+  • Governing law for Section A disputes: United States and State of Texas,
+    excluding conflict-of-law rules, unless a Section B agreement specifies
+    otherwise.
+
+Version: 1.0 — 2026-07-30
+Repository: https://github.com/AlexBTC420/wokenet
