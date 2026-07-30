@@ -23,6 +23,7 @@
     "clean": "rm -rf dist coverage",
     "lint": "eslint src test scripts",
     "bench": "node --experimental-strip-types scripts/benchmark.ts",
+    "bench:scale": "node --experimental-strip-types scripts/scale-benchmark.ts",
     "test": "vitest run --exclude 'dist/**'",
     "test:coverage": "vitest run --coverage --exclude 'dist/**'",
     "typecheck": "tsc -p tsconfig.json --noEmit"
