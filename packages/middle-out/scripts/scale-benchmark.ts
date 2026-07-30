@@ -630,10 +630,20 @@ ${mechanismTable(reuseResult)}
   content that has been _re-coded_ rather than _re-copied_ is never byte-identical. That is the
   whole point: the ${ratio(reuseLast.middleOutRatio)}× is bought almost entirely by the similarity-delta path, on
   redundancy that exact dedup structurally cannot see.
-- **Sublinearity.** Mean similarity-index candidates examined per query went
-  ${reuseFirst.meanCandidatesPerQuery.toFixed(2)} → ${reuseLast.meanCandidatesPerQuery.toFixed(2)} while the index grew from ${String(reuseFirst.indexSize)} to ${String(reuseLast.indexSize)} sketches. A
-  query's cost is set by the band count and the candidate cap, not by the corpus size — which is
-  what makes "compress against everything the network holds" a map lookup rather than a scan.
+- **Sublinearity, stated carefully.** Mean similarity-index candidates examined per query went
+  ${reuseFirst.meanCandidatesPerQuery.toFixed(2)} → ${reuseLast.meanCandidatesPerQuery.toFixed(2)} while the index grew from ${String(reuseFirst.indexSize)} to ${String(reuseLast.indexSize)} sketches. That figure
+  **rises**, and it would be sleight of hand to present a rising number as proof of a flat one, so
+  here is what it does and does not show. It rises because the corpus genuinely comes to contain
+  more chunks that resemble the incoming one — those are true candidates, and finding them is the
+  point. What it shows is the _magnitude_: ${reuseLast.meanCandidatesPerQuery.toFixed(2)} candidates scored against an index of
+  ${String(reuseLast.indexSize)} sketches, i.e. ${((reuseLast.meanCandidatesPerQuery / reuseLast.indexSize) * 100).toFixed(2)} % of the corpus, nowhere near the 512-candidate cap.
+  The **control** table below is the cleaner evidence for the flatness claim: there, candidates per
+  query stays at ${controlLast.meanCandidatesPerQuery.toFixed(2)} across an index growing from ${String(controlFirst.indexSize)} to ${String(controlLast.indexSize)} sketches — a query over
+  a corpus with nothing similar in it does not get more expensive as the corpus grows. The
+  structural reason is that a query does \`bands\` map lookups and scores at most \`maxCandidates\`
+  sketches; neither term mentions corpus size. That is what makes "compress against everything the
+  network holds" a map lookup rather than a scan. A proper sweep to millions of chunks is not run
+  here and is listed under what this does not prove.
 - Delta chain depth histogram (records at depth 0, 1, 2, …): ${JSON.stringify(reuseResult.depthHistogram)}, deepest
   chain ${String(reuseLast.maxObservedChainDepth)} against a bound of ${String(DEFAULT_MAX_CHAIN_DEPTH)}. Chains form but stay shallow, because the smallest
   delta is usually against a master rather than against another derivative — so the bound is
@@ -722,7 +732,12 @@ Stated at the same volume as the result, because a result whose limits are hidde
    only verified for correctness, not timed.
 7. **No adversarial corpus.** Inputs designed to maximise similarity-index work, poison band
    buckets, or force worst-case delta encoding are not covered here.
-8. **One chunker configuration.** The 8/32/128 KiB content-defined chunking defaults are used
+8. **Index scaling is argued structurally, not measured at scale.** The largest index here holds
+   ${String(Math.max(reuseLast.indexSize, controlLast.indexSize))} sketches. Query cost is \`O(bands)\` lookups plus at most \`maxCandidates\` sketch
+   comparisons, so it cannot grow with corpus size by construction — but "cannot grow by
+   construction" is an argument about the code, and a corpus of millions of chunks has not been run.
+   Nor has index memory: the sketches and band buckets are held entirely in RAM.
+9. **One chunker configuration.** The 8/32/128 KiB content-defined chunking defaults are used
    throughout. Chunk size trades metadata against dedup and delta granularity and was not swept.
 `;
 

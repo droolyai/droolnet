@@ -118,18 +118,28 @@ Mechanism behind the same rows:
   content that has been _re-coded_ rather than _re-copied_ is never byte-identical. That is the
   whole point: the 2.1459× is bought almost entirely by the similarity-delta path, on
   redundancy that exact dedup structurally cannot see.
-- **Sublinearity.** Mean similarity-index candidates examined per query went
-  0.00 → 3.03 while the index grew from 5 to 340 sketches. A
-  query's cost is set by the band count and the candidate cap, not by the corpus size — which is
-  what makes "compress against everything the network holds" a map lookup rather than a scan.
+- **Sublinearity, stated carefully.** Mean similarity-index candidates examined per query went
+  0.00 → 3.03 while the index grew from 5 to 340 sketches. That figure
+  **rises**, and it would be sleight of hand to present a rising number as proof of a flat one, so
+  here is what it does and does not show. It rises because the corpus genuinely comes to contain
+  more chunks that resemble the incoming one — those are true candidates, and finding them is the
+  point. What it shows is the _magnitude_: 3.03 candidates scored against an index of
+  340 sketches, i.e. 0.89 % of the corpus, nowhere near the 512-candidate cap.
+  The **control** table below is the cleaner evidence for the flatness claim: there, candidates per
+  query stays at 0.00 across an index growing from 6 to 370 sketches — a query over
+  a corpus with nothing similar in it does not get more expensive as the corpus grows. The
+  structural reason is that a query does `bands` map lookups and scores at most `maxCandidates`
+  sketches; neither term mentions corpus size. That is what makes "compress against everything the
+  network holds" a map lookup rather than a scan. A proper sweep to millions of chunks is not run
+  here and is listed under what this does not prove.
 - Delta chain depth histogram (records at depth 0, 1, 2, …): [107,207,25,1,0], deepest
   chain 3 against a bound of 4. Chains form but stay shallow, because the smallest
   delta is usually against a master rather than against another derivative — so the bound is
   mostly a guarantee about the worst case rather than a constraint that binds in practice. It still
   has to exist: without it, a long-lived corpus of successive re-encodes would chain indefinitely,
   and each link added is one more read dependency and one more chunk lost when any link is lost.
-- Ingest throughput: 1.58 MiB/s single-threaded, over 10.99 MiB in
-  6.94 s. This is dominated by brotli quality 11, which is run at least once per
+- Ingest throughput: 1.59 MiB/s single-threaded, over 10.99 MiB in
+  6.90 s. This is dominated by brotli quality 11, which is run at least once per
   distinct chunk to establish the never-worse baseline. It is a write-path cost paid once per
   chunk, and it is not fast; quality 11 was chosen because it makes the _baseline_ as strong as
   possible, which is the opposite of choosing it to look good.
@@ -226,5 +236,10 @@ Stated at the same volume as the result, because a result whose limits are hidde
    only verified for correctness, not timed.
 7. **No adversarial corpus.** Inputs designed to maximise similarity-index work, poison band
    buckets, or force worst-case delta encoding are not covered here.
-8. **One chunker configuration.** The 8/32/128 KiB content-defined chunking defaults are used
+8. **Index scaling is argued structurally, not measured at scale.** The largest index here holds
+   370 sketches. Query cost is `O(bands)` lookups plus at most `maxCandidates` sketch
+   comparisons, so it cannot grow with corpus size by construction — but "cannot grow by
+   construction" is an argument about the code, and a corpus of millions of chunks has not been run.
+   Nor has index memory: the sketches and band buckets are held entirely in RAM.
+9. **One chunker configuration.** The 8/32/128 KiB content-defined chunking defaults are used
    throughout. Chunk size trades metadata against dedup and delta granularity and was not swept.
