@@ -15,10 +15,11 @@
       content="A locked research and source-safety page for a future independently audited newsroom intake system. No source submission or encryption endpoint is active."
     />
     <title>Source Desk — Continuity Bureau</title>
-    <link rel="stylesheet" href="/secure-drop.css?v=20260804-1" />
-    <script src="/secure-drop.js?v=20260804-1" defer></script>
+    <!-- No favicon/img/fonts: page meta CSP locks img-src/font-src 'none' for source-desk safety -->
+    <link rel="stylesheet" href="/secure-drop.css?v=20260804-tg-sd1" />
+    <script src="/secure-drop.js?v=20260804-tg-sd1" defer></script>
   </head>
-  <body>
+  <body class="tg-seal-chronal" data-tg-seal="chronal">
     <a class="skip-link" href="#source-form">Skip to secure intake</a>
 
     <header class="masthead">
@@ -30,10 +31,20 @@
         </span>
         <span><strong>CONTINUITY BUREAU</strong><small>INDEPENDENT SOURCE DESK</small></span>
       </a>
+      <p class="header-status" aria-label="Bureau status">
+        <span class="header-status-dot" aria-hidden="true"></span>
+        <span>CHRONAL · INTAKE OFF</span>
+      </p>
       <div class="desk-status" id="desk-status" role="status" aria-live="polite">
         <span aria-hidden="true"></span> VERIFYING RECIPIENT KEY
       </div>
     </header>
+
+    <div class="tg-alert-rail" role="status" aria-label="Chronal directive">
+      <span>CB–SD // CHRONAL</span>
+      <strong>INTAKE DISABLED · RESEARCH ONLY</strong>
+      <span>NO ENCRYPTION PATH · NO SUBMISSION</span>
+    </div>
 
     <main>
       <section class="hero" aria-labelledby="page-title">
