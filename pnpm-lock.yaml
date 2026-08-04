@@ -42,11 +42,23 @@ importers:
         specifier: 4.1.10
         version: 4.1.10(@types/node@22.20.1)(@vitest/coverage-v8@4.1.10)
 
+  packages/feed:
+    devDependencies:
+      vitest:
+        specifier: 4.1.10
+        version: 4.1.10(@types/node@22.20.1)(@vitest/coverage-v8@4.1.10)
+
   packages/middle-out:
     dependencies:
       bs58:
         specifier: 6.0.0
         version: 6.0.0
+    devDependencies:
+      vitest:
+        specifier: 4.1.10
+        version: 4.1.10(@types/node@22.20.1)(@vitest/coverage-v8@4.1.10)
+
+  packages/sync-core:
     devDependencies:
       vitest:
         specifier: 4.1.10

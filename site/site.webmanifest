@@ -1,0 +1,21 @@
+{
+  "name": "Continuity Bureau",
+  "short_name": "Bureau",
+  "description": "The public chronology terminal for WOKE.NET continuity research.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#060705",
+  "theme_color": "#060705",
+  "icons": [
+    {
+      "src": "/assets/continuity-bureau-mark-v3-128.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/continuity-bureau-mark-v3.png",
+      "sizes": "1024x1024",
+      "type": "image/png"
+    }
+  ]
+}

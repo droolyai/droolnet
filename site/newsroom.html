@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#090a0a" />
+    <meta
+      name="description"
+      content="A fictional demonstration of a provenance-first, source-protective public-interest newsroom for Continuity Bureau research."
+    />
+    <meta name="robots" content="noindex,nofollow" />
+    <title>Signal Desk — Continuity Bureau Newsroom Prototype</title>
+    <link rel="stylesheet" href="/newsroom.css?v=20260804-1" />
+    <script src="/newsroom.js?v=20260804-1" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#dispatches">Skip to dispatches</a>
+    <div class="ambient-grid" aria-hidden="true"></div>
+
+    <header class="masthead">
+      <a class="wordmark" href="/newsroom.html" aria-label="Signal Desk home">
+        <span class="bureau-mark" aria-hidden="true">
+          <img src="/assets/continuity-bureau-mark-v3-128.png" alt="" width="40" height="40" />
+        </span>
+        <span><b>SIGNAL DESK</b><small>CONTINUITY BUREAU / PUBLIC NEWSROOM</small></span>
+      </a>
+      <a class="hq-return" href="/">Bureau HQ ↗</a>
+      <nav aria-label="Newsroom navigation">
+        <a href="#dispatches">Dispatches</a>
+        <a href="#standards">Standards</a>
+        <a href="#ledger">Evidence ledger</a>
+        <button class="saved-button" type="button" data-open-saved>
+          Reading list <span data-saved-count>0</span>
+        </button>
+      </nav>
+      <a class="tipline-link" href="/secure-drop" aria-label="Source safety status — intake disabled">Intake disabled</a>
+    </header>
+
+    <div class="demo-banner" role="status">
+      <b>PROTOTYPE / FICTIONAL DOSSIERS</b>
+      <span>No live reporting, real people, or current events appear on this page.</span>
+    </div>
+
+    <main>
+      <section class="hero" aria-labelledby="newsroom-heading">
+        <div class="hero-copy">
+          <p class="kicker">CITY DESK // PUBLIC-INTEREST SIGNAL</p>
+          <h1 id="newsroom-heading">Truth needs<br /><em>a paper trail.</em></h1>
+          <p class="hero-dek">
+            A newsroom concept built around people, proof, and the public record. Sources are treated
+            with care. Claims travel with evidence. Corrections never disappear.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#dispatches">Read the demo dossiers</a>
+            <a class="button" href="#standards">Inspect our method</a>
+          </div>
+          <p class="editor-note">
+            <span>FROM THE DESK</span>
+            Urgency is not an excuse to outrun the evidence. We publish what can be shown, name what
+            remains uncertain, and protect the human being before the headline.
+          </p>
+        </div>
+
+        <aside class="signal-monitor" aria-label="Newsroom readiness status">
+          <div class="monitor-head"><span>SIGNAL INTEGRITY</span><b>DEMO 01</b></div>
+          <div class="pulse-field" aria-hidden="true">
+            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+            <span class="monitor-core">PUBLIC<br />RECORD</span>
+          </div>
+          <dl>
+            <div><dt>Editorial surface</dt><dd class="state-ready">Prototype ready</dd></div>
+            <div><dt>Evidence receipts</dt><dd class="state-ready">Interface demo</dd></div>
+            <div><dt>Saved reading</dt><dd class="state-ready">This browser only</dd></div>
+            <div><dt>E2EE tip delivery</dt><dd class="state-staged">Not deployed</dd></div>
+            <div><dt>Peer replication</dt><dd class="state-staged">Research stage</dd></div>
+          </dl>
+        </aside>
+      </section>
+
+      <section class="desk-strip" aria-label="Editorial principles">
+        <p><span>01</span><b>Protect the vulnerable.</b> Consent and retaliation risk come first.</p>
+        <p><span>02</span><b>Show the receipt.</b> Claims expose their evidence and uncertainty.</p>
+        <p><span>03</span><b>Keep the history.</b> Corrections append; they do not erase.</p>
+      </section>
+
+      <section class="dispatch-section" id="dispatches" aria-labelledby="dispatch-heading">
+        <header class="section-head">
+          <div>
+            <p class="kicker">LATEST / DEMONSTRATION EDITION</p>
+            <h2 id="dispatch-heading">The city is speaking.<br /><em>We follow the signal.</em></h2>
+          </div>
+          <p>
+            The dossiers below are invented examples designed to demonstrate transparent sourcing,
+            risk labels, evidence receipts, and correction trails. They are not news reports.
+          </p>
+        </header>
+
+        <div class="filter-bar" role="group" aria-label="Filter demo dispatches">
+          <button class="filter is-active" type="button" data-filter="all" aria-pressed="true" aria-controls="story-grid">All desks</button>
+          <button class="filter" type="button" data-filter="civic" aria-pressed="false" aria-controls="story-grid">Civic</button>
+          <button class="filter" type="button" data-filter="technology" aria-pressed="false" aria-controls="story-grid">Technology</button>
+          <button class="filter" type="button" data-filter="culture" aria-pressed="false" aria-controls="story-grid">Culture</button>
+          <button class="filter" type="button" data-filter="climate" aria-pressed="false" aria-controls="story-grid">Climate</button>
+        </div>
+        <p class="filter-status" data-filter-status aria-live="polite">Showing all 4 fictional demo dossiers.</p>
+
+        <div class="story-grid" id="story-grid" data-story-grid>
+          <article class="story-card story-lead" data-story="reservoir" data-desk="civic climate">
+            <div class="story-visual visual-reservoir" aria-hidden="true">
+              <span>CASE 04–R</span><b>PUBLIC<br />WATER</b><i>FICTION</i>
+            </div>
+            <div class="story-body">
+              <div class="story-flags">
+                <span class="demo-pill">Fictional demo</span><span>Civic systems</span><time datetime="2026-08-04">Aug 4, 2026</time>
+              </div>
+              <h3>A reservoir went quiet. The maintenance logs did not.</h3>
+              <p class="dek">
+                In the invented city of Northstar, a fictional neighborhood asks why repeated pump
+                warnings vanished from a public dashboard before a four-day service interruption.
+              </p>
+              <p class="byline">By The Signal Desk <span>8 min demo read</span></p>
+              <div class="risk-row">
+                <span class="risk risk-medium">Source risk: elevated</span>
+                <span class="receipt-count">6 evidence receipts</span>
+              </div>
+              <div class="card-actions">
+                <button type="button" data-open-dossier="reservoir">Open dossier</button>
+                <button class="save-story" type="button" data-save-story="reservoir" aria-pressed="false">
+                  <span aria-hidden="true">＋</span> Save locally
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="story-card" data-story="model" data-desk="technology">
+            <div class="story-visual visual-model" aria-hidden="true">
+              <span>CASE 19–M</span><b>THE<br />MISSING<br />MODEL CARD</b><i>FICTION</i>
+            </div>
+            <div class="story-body">
+              <div class="story-flags"><span class="demo-pill">Fictional demo</span><span>Technology</span></div>
+              <h3>The algorithm graded families. Its documentation graded itself.</h3>
+              <p class="dek">A demonstration investigation follows a fictional scoring system from procurement memo to appeal desk.</p>
+              <p class="byline">By The Systems Unit <span>11 min demo read</span></p>
+              <div class="risk-row"><span class="risk risk-high">Source risk: high</span><span class="receipt-count">9 evidence receipts</span></div>
+              <div class="card-actions">
+                <button type="button" data-open-dossier="model">Open dossier</button>
+                <button class="save-story" type="button" data-save-story="model" aria-pressed="false"><span aria-hidden="true">＋</span> Save locally</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="story-card" data-story="frequency" data-desk="culture technology">
+            <div class="story-visual visual-frequency" aria-hidden="true">
+              <span>CASE 77–F</span><b>WHO<br />OWNS THE<br />FREQUENCY?</b><i>FICTION</i>
+            </div>
+            <div class="story-body">
+              <div class="story-flags"><span class="demo-pill">Fictional demo</span><span>Culture</span></div>
+              <h3>When a community station vanished, its archive found another route.</h3>
+              <p class="dek">A fictional oral-history dossier about artists rebuilding a lost neighborhood broadcast archive.</p>
+              <p class="byline">By The Culture Desk <span>6 min demo read</span></p>
+              <div class="risk-row"><span class="risk risk-low">Source risk: low</span><span class="receipt-count">5 evidence receipts</span></div>
+              <div class="card-actions">
+                <button type="button" data-open-dossier="frequency">Open dossier</button>
+                <button class="save-story" type="button" data-save-story="frequency" aria-pressed="false"><span aria-hidden="true">＋</span> Save locally</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="story-card" data-story="heat" data-desk="climate civic">
+            <div class="story-visual visual-heat" aria-hidden="true">
+              <span>CASE 31–H</span><b>HEAT<br />AFTER<br />DARK</b><i>FICTION</i>
+            </div>
+            <div class="story-body">
+              <div class="story-flags"><span class="demo-pill">Fictional demo</span><span>Climate</span></div>
+              <h3>The cooling centers closed at eight. The hottest hours came later.</h3>
+              <p class="dek">A demonstration data story maps invented temperatures, transit gaps, and overnight access.</p>
+              <p class="byline">By The City Data Desk <span>9 min demo read</span></p>
+              <div class="risk-row"><span class="risk risk-medium">Source risk: elevated</span><span class="receipt-count">7 evidence receipts</span></div>
+              <div class="card-actions">
+                <button type="button" data-open-dossier="heat">Open dossier</button>
+                <button class="save-story" type="button" data-save-story="heat" aria-pressed="false"><span aria-hidden="true">＋</span> Save locally</button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="method-section" id="standards" aria-labelledby="standards-heading">
+        <header class="section-head compact">
+          <div><p class="kicker">THE METHOD / PUBLIC BY DEFAULT</p><h2 id="standards-heading">Trust is a system,<br /><em>not a slogan.</em></h2></div>
+          <p>Each publication object is designed to carry a signed author record, source-risk review, evidence manifest, and append-only correction history.</p>
+        </header>
+        <ol class="method-grid">
+          <li><span>01</span><b>Receive with care</b><p>Minimize collection. Separate source identity from editorial material. Never promise deployed encryption that does not exist.</p></li>
+          <li><span>02</span><b>Verify independently</b><p>Record what corroborates each claim, what contradicts it, and which uncertainty survives publication.</p></li>
+          <li><span>03</span><b>Publish the receipt</b><p>Expose hashes, timestamps, methods, transformations, and redaction reasons without exposing a vulnerable source.</p></li>
+          <li><span>04</span><b>Correct in public</b><p>Append corrections to the record, preserve prior versions, and state what changed in plain language.</p></li>
+        </ol>
+      </section>
+
+      <section class="ledger-section" id="ledger" aria-labelledby="ledger-heading">
+        <header class="section-head compact">
+          <div><p class="kicker">PUBLIC LEDGER / DEMONSTRATION RECEIPTS</p><h2 id="ledger-heading">Evidence can travel<br /><em>with the story.</em></h2></div>
+          <p>These sample identifiers illustrate a receipt interface. They are not verified evidence, blockchain transactions, or live decentralized storage records.</p>
+        </header>
+        <div class="ledger-table" role="table" aria-label="Demonstration evidence receipts">
+          <div class="ledger-row ledger-head" role="row"><span role="columnheader">Receipt</span><span role="columnheader">Object</span><span role="columnheader">Method</span><span role="columnheader">Demo state</span></div>
+          <div class="ledger-row" role="row"><code role="cell">demo:9b21…42cf</code><span role="cell">Pump warning log / redacted facsimile</span><span role="cell">Illustrative digest label</span><b role="cell">Scenario: corroborates</b></div>
+          <div class="ledger-row" role="row"><code role="cell">demo:61f0…18aa</code><span role="cell">Procurement appendix / synthetic record</span><span role="cell">Illustrative comparison</span><b role="cell">Scenario: partial</b></div>
+          <div class="ledger-row" role="row"><code role="cell">demo:a201…e903</code><span role="cell">Oral-history excerpt / fictional transcript</span><span role="cell">Illustrative consent review</span><b role="cell">Scenario: context</b></div>
+          <div class="ledger-row" role="row"><code role="cell">demo:407c…a680</code><span role="cell">Temperature series / generated fixture</span><span role="cell">Illustrative notebook</span><b role="cell">Scenario: method shown</b></div>
+        </div>
+      </section>
+
+      <section class="tipline-section" id="tipline" aria-labelledby="tipline-heading">
+        <div>
+          <p class="kicker">SOURCE SAFETY / READ BEFORE CONTACT</p>
+          <h2 id="tipline-heading">Your safety matters<br /><em>more than our scoop.</em></h2>
+          <p>
+            This prototype does not accept tips, files, identities, or confidential messages. The
+            future tipline remains disabled until independent security review, metadata-minimizing
+            infrastructure, and a published threat model are complete.
+          </p>
+        </div>
+        <aside>
+          <span class="not-live">TIPLINE NOT LIVE</span>
+          <h3>Before any real launch</h3>
+          <ul>
+            <li>E2EE audited by independent experts</li>
+            <li>Source identity separated from story workspace</li>
+            <li>Metadata and retention limits documented</li>
+            <li>Emergency deletion and legal-response policy tested</li>
+          </ul>
+          <a class="intake-status-link" href="/secure-drop">Read intake status — unavailable</a>
+        </aside>
+      </section>
+
+      <section class="network-status" aria-labelledby="network-heading">
+        <div><p class="kicker">WOKE.NET / RESEARCH FOUNDATION</p><h2 id="network-heading">The route ahead,<br /><em>without mythology.</em></h2></div>
+        <div class="phase-list">
+          <article><span>NOW</span><b>Local-first reader state</b><p>Saved stories stay in this browser. No account, tracking beacon, or server sync is used by this prototype.</p><strong class="state-ready">Working here</strong></article>
+          <article><span>NEXT</span><b>Signed publication objects</b><p>Portable story manifests, author keys, correction deltas, and evidence receipts require implementation and review.</p><strong class="state-staged">Specified</strong></article>
+          <article><span>RESEARCH</span><b>Encrypted peer replication</b><p>Resilient distribution, relay discovery, source compartmentalization, and recovery remain foundation research.</p><strong class="state-staged">Not deployed</strong></article>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <a class="wordmark" href="/newsroom.html"><span class="bureau-mark small" aria-hidden="true"><img src="/assets/continuity-bureau-mark-v3-128.png" alt="" width="34" height="34" /></span><span><b>SIGNAL DESK</b><small>A CONTINUITY BUREAU PROTOTYPE</small></span></a>
+      <p>Fictional demonstration only. No live newsroom, encrypted tipline, or decentralized publishing network is claimed.</p>
+      <a href="/">Return to Bureau HQ ↗</a>
+    </footer>
+
+    <dialog class="dossier-dialog" data-dossier-dialog aria-labelledby="dossier-title" aria-describedby="dossier-description dossier-warning">
+      <button class="dialog-close" type="button" data-close-dialog aria-label="Close dossier">×</button>
+      <p class="kicker">EVIDENCE DOSSIER / FICTIONAL DEMONSTRATION</p>
+      <h2 id="dossier-title" data-dossier-title>Demo dossier</h2>
+      <p class="dialog-dek" id="dossier-description" data-dossier-dek></p>
+      <div class="dossier-grid">
+        <section><h3>Claim map</h3><div data-claim-list></div></section>
+        <section><h3>Provenance receipt</h3><dl data-receipt-list></dl></section>
+      </div>
+      <section class="correction-log">
+        <h3>Correction & revision history</h3>
+        <ol data-correction-list></ol>
+      </section>
+      <p class="dossier-warning" id="dossier-warning">All names, events, documents, hashes, and quotes in this dossier are fictional demonstration data.</p>
+    </dialog>
+
+    <dialog class="saved-drawer" data-saved-dialog aria-labelledby="saved-title" aria-describedby="saved-description">
+      <button class="dialog-close" type="button" data-close-saved aria-label="Close reading list">×</button>
+      <p class="kicker">THIS BROWSER / DEVICE-LOCAL READING LIST</p>
+      <h2 id="saved-title">Saved signals</h2>
+      <p id="saved-description">Your list stays in this browser’s local storage. It is not synced or sent to a server, but other people using this browser profile may be able to see it.</p>
+      <div data-saved-list></div>
+      <button class="clear-saved" type="button" data-clear-saved>Clear reading list</button>
+    </dialog>
+  </body>
+</html>

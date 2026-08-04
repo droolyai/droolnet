@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /secure-drop
+Disallow: /secure-drop.html
+
+Sitemap: https://www.continuitybureau.com/sitemap.xml

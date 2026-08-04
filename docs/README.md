@@ -7,6 +7,7 @@ The canonical map of this repository's documentation.
 | [DECENTRALIZED_SOVEREIGNTY.md](DECENTRALIZED_SOVEREIGNTY.md) | The founding ideology and its Pillars of Decentralization |
 | [MIDDLE_OUT.md](MIDDLE_OUT.md) | The middle-out compression program: definition, measurement contract, roadmap |
 | [VIDEO.md](VIDEO.md) | The decentralized video platform design |
+| [CONTINUITY_BUREAU_SECURE_DROP.md](CONTINUITY_BUREAU_SECURE_DROP.md) | Threat model and staged production architecture for E2EE source submissions |
 | [DECISIONS/](DECISIONS) | Architecture decision records |
 
 Product, deployment, and protocol-on-Solana documentation lives in the sibling

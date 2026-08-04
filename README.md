@@ -20,6 +20,8 @@ made.
 | Area | Contents | Status |
 | --- | --- | --- |
 | [`packages/middle-out`](packages/middle-out) | The middle-out compression program: content-defined chunking with global dedup, and typed middle-representation transcoding for protocol data — self-verifying losslessness, deterministic corpus, reproducible benchmarks | Implemented subset with measured results in `packages/middle-out/BENCHMARK.md` |
+| [`packages/feed`](packages/feed) | Deterministic, user-owned feed ranking: local policy, fixed integer weights, author diversity, and cryptographic input/preference/output receipts | Implemented research subset; not connected to a production relay or index |
+| [`packages/sync-core`](packages/sync-core) | Signed, encrypted, content-addressed change-DAG primitives for ICEFAM.FM social spaces | Implemented cryptographic subset; transport, discovery, storage, key rotation, and production E2EE are staged |
 | [`docs/MIDDLE_OUT.md`](docs/MIDDLE_OUT.md) | The compression program's definition, measurement contract, and roadmap | Design + implemented subset |
 | [`docs/VIDEO.md`](docs/VIDEO.md) | The decentralized video platform design — fast, high-quality, environment-friendly, free, accepting, with honest safety boundaries | Design; not built |
 | [`docs/DECENTRALIZED_SOVEREIGNTY.md`](docs/DECENTRALIZED_SOVEREIGNTY.md) | The founding ideology: the Pillars of Decentralization | Owner vision |

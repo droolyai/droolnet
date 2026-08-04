@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#090805" />
+    <meta name="robots" content="noindex, nofollow, noarchive" />
+    <meta name="referrer" content="no-referrer" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'none'; connect-src 'none'; font-src 'none'; object-src 'none'; media-src 'none'; frame-src 'none'; child-src 'none'; worker-src 'none'; manifest-src 'none'; frame-ancestors 'none'; base-uri 'none'; form-action 'none'; require-trusted-types-for 'script'; trusted-types 'none'"
+    />
+    <meta
+      name="description"
+      content="A locked research and source-safety page for a future independently audited newsroom intake system. No source submission or encryption endpoint is active."
+    />
+    <title>Source Desk — Continuity Bureau</title>
+    <link rel="stylesheet" href="/secure-drop.css?v=20260804-1" />
+    <script src="/secure-drop.js?v=20260804-1" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#source-form">Skip to secure intake</a>
+
+    <header class="masthead">
+      <a class="wordmark" href="/" aria-label="Continuity Bureau home">
+        <span class="wordmark-mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" focusable="false">
+            <path d="M16 5 27 25H5Z" />
+          </svg>
+        </span>
+        <span><strong>CONTINUITY BUREAU</strong><small>INDEPENDENT SOURCE DESK</small></span>
+      </a>
+      <div class="desk-status" id="desk-status" role="status" aria-live="polite">
+        <span aria-hidden="true"></span> VERIFYING RECIPIENT KEY
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="page-title">
+        <div class="hero-copy">
+          <p class="kicker">SOURCE DESK / SAFETY RESEARCH / INTAKE DISABLED</p>
+          <h1 id="page-title">Bring the truth.<br /><em>Keep your agency.</em></h1>
+          <p class="lede">
+            If the public needs to know, evidence matters. This page explains the planned safety
+            boundary for a future newsroom source system. It does not accept, encrypt, upload, send,
+            or publish your material.
+          </p>
+        </div>
+        <aside class="promise" aria-label="Protection boundary">
+          <span>THE BOUNDARY</span>
+          <strong>This research page does not accept plaintext.</strong>
+          <p>
+            There is no recipient key, encryption runtime, receiver, or delivery path. Visiting the
+            clearnet page can still expose network metadata, and this prototype makes no anonymity
+            guarantee.
+          </p>
+        </aside>
+      </section>
+
+      <section class="safety-grid" aria-labelledby="before-heading">
+        <div>
+          <p class="section-number">01 / BEFORE YOU BEGIN</p>
+          <h2 id="before-heading">Protect the source,<br />then protect the story.</h2>
+        </div>
+        <div class="safety-cards">
+          <article>
+            <span aria-hidden="true">01</span>
+            <h3>Use a safer device</h3>
+            <p>
+              A work or managed device may record activity, filenames, clipboard contents, or
+              screenshots. Use a device and network you trust.
+            </p>
+          </article>
+          <article>
+            <span aria-hidden="true">02</span>
+            <h3>Inspect your files</h3>
+            <p>
+              Photos, documents, and recordings can contain names, locations, author history, and
+              device identifiers. This tool does not remove embedded metadata.
+            </p>
+          </article>
+          <article>
+            <span aria-hidden="true">03</span>
+            <h3>Share only what is needed</h3>
+            <p>
+              Never include a password, seed phrase, private key, or unrelated personal record.
+              Encryption cannot undo an unsafe disclosure.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="intake" aria-labelledby="intake-heading">
+        <div class="intake-heading">
+          <p class="section-number">02 / BUILD THE PACKAGE</p>
+          <h2 id="intake-heading">Document what happened.</h2>
+          <p>
+            Lead with what can be verified: what occurred, when, where, who can corroborate it, and
+            what records support it. Separate what you observed from what you infer.
+          </p>
+        </div>
+
+        <form id="source-form" autocomplete="off" novalidate>
+          <fieldset id="intake-fields" disabled>
+            <legend class="sr-only">Secure source intake</legend>
+
+            <label for="summary">What should the newsroom investigate? <b>Required</b></label>
+            <textarea
+              id="summary"
+              name="summary"
+              rows="9"
+              minlength="40"
+              maxlength="12000"
+              required
+              autocorrect="off"
+              spellcheck="false"
+              placeholder="Describe the event and the evidence in your own words. Avoid identifying yourself unless it is necessary."
+            ></textarea>
+            <div class="field-note">
+              <span>Encrypted locally. Never autosaved.</span>
+              <output id="summary-count" for="summary">0 / 12,000</output>
+            </div>
+
+            <label for="timeline">Timeline and verification details <span>Optional</span></label>
+            <textarea
+              id="timeline"
+              name="timeline"
+              rows="5"
+              maxlength="6000"
+              autocorrect="off"
+              spellcheck="false"
+              placeholder="Dates, locations, document references, witnesses, and what would independently confirm the account."
+            ></textarea>
+
+            <label for="reply">Safer way to reply <span>Optional</span></label>
+            <input
+              id="reply"
+              name="reply"
+              type="text"
+              maxlength="300"
+              autocomplete="off"
+              autocapitalize="off"
+              spellcheck="false"
+              placeholder="A contact method you control. Leave blank to avoid including one."
+            />
+            <p class="field-warning">
+              Contact details can identify you. The newsroom cannot reply if you leave this blank.
+            </p>
+
+            <label for="evidence"
+              >Evidence file <span>Optional · one file · 8 MB maximum</span></label
+            >
+            <input id="evidence" name="evidence" type="file" />
+            <div class="file-readout" id="file-readout" aria-live="polite">No file selected.</div>
+
+            <label class="consent-row" for="safety-confirmed">
+              <input id="safety-confirmed" name="safetyConfirmed" type="checkbox" required />
+              <span>
+                I reviewed the safety warnings, removed secrets I do not intend to share, and
+                understand that the downloaded package is not automatically delivered.
+              </span>
+            </label>
+
+            <div class="actions">
+              <button class="button secondary" id="preview-button" type="button">
+                Preview locally
+              </button>
+              <button class="button primary" id="encrypt-button" type="submit">
+                Encrypt &amp; download package
+              </button>
+            </div>
+          </fieldset>
+
+          <div class="locked-state" id="locked-state" role="alert">
+            <span>DESK LOCKED</span>
+            <strong>Source intake is not operational.</strong>
+            <p>
+              Do not enter or attach confidential material. Before this interface can be enabled,
+              the Bureau must ship an audited protocol library, signed and independently witnessed
+              recipient manifests, a hardened receiver, a separate authenticated delivery path, and
+              a published external security review.
+            </p>
+          </div>
+
+          <div class="crypto-state" aria-label="Cryptographic configuration status">
+            <div><span>STATUS</span><strong>STAGE 0 / RESEARCH LOCKED</strong></div>
+            <div><span>ENVELOPE</span><strong>AUDITED HPKE SUITE REQUIRED</strong></div>
+            <div><span>PAYLOAD</span><strong>AUDITED STREAMING AEAD REQUIRED</strong></div>
+            <div>
+              <span>RECIPIENT</span><strong id="recipient-key-id">NO OPERATIONAL MANIFEST</strong>
+            </div>
+            <div class="fingerprint">
+              <span>SHA-256 FINGERPRINT</span
+              ><strong id="recipient-fingerprint">NOT PUBLISHED</strong>
+            </div>
+          </div>
+
+          <p class="form-message" id="form-message" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+
+      <section class="truth-boundary" aria-labelledby="truth-heading">
+        <p class="section-number">03 / WHAT THIS DOES NOT PROMISE</p>
+        <h2 id="truth-heading">Encryption is protection.<br />It is not invisibility.</h2>
+        <div>
+          <p>
+            This clearnet research page does not accept, encrypt, upload, or download source
+            material. It does not conceal your IP address, prevent device monitoring, sanitize
+            files, guarantee editorial review, or provide a delivery channel.
+          </p>
+          <p>
+            A future encrypted envelope will still expose bounded routing metadata and padded size
+            classes. Embedded document metadata remains visible to an authorized journalist after
+            decryption. Browsers also cannot guarantee memory erasure or protection from extensions,
+            input services, screenshots, or a compromised origin.
+          </p>
+          <p>
+            A future receiver must undergo independent security review, publish key rotation and
+            retention policies, and provide a separate authenticated delivery path before the desk
+            can be called operational.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <dialog id="preview-dialog" aria-labelledby="preview-title">
+      <div class="dialog-head">
+        <div>
+          <span>LOCAL PREVIEW</span>
+          <h2 id="preview-title">Review before encryption</h2>
+        </div>
+        <button type="button" id="close-preview" aria-label="Close preview">×</button>
+      </div>
+      <p class="dialog-warning">
+        This preview exists only in this tab. Confirm the story contains no unintended identifying
+        details.
+      </p>
+      <dl id="preview-content"></dl>
+      <button class="button secondary" id="return-to-form" type="button">Return to form</button>
+    </dialog>
+
+    <footer>
+      <span>CONTINUITY BUREAU / SOURCE DESK</span>
+      <p>Stage 0 research · intake disabled · receiver not deployed</p>
+      <a href="/">Return to public headquarters</a>
+    </footer>
+  </body>
+</html>
