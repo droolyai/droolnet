@@ -1,17 +1,40 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700;800&display=swap');
 :root {
-  --bg: #0d0c09;
-  --panel: #15130d;
-  --panel2: #1c1910;
+  --bg: #050505;
+  --panel: #0c0b09;
+  --panel2: #14120e;
   --line: rgba(244, 195, 106, 0.2);
-  --acid: #f4cf78;
+  --line-strong: rgba(244, 195, 106, 0.34);
+  --acid: #f4c36a;
   --acid2: #d89042;
   --amber: #f4c36a;
   --red: #df584b;
+  --ok: #73e59a;
   --text: #f2ead7;
-  --muted: #a69c83;
-  --mono: 'IBM Plex Mono', monospace;
+  --muted: #9a9180;
+  --mono: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
   --sans: Inter, system-ui, sans-serif;
+  --serif: 'Instrument Serif', Iowan Old Style, Baskerville, 'Times New Roman', Georgia, serif;
+  --radius-hard: 3px;
+  --radius-ctl: 999px;
+
+  /* Time Gods token aliases (CHRONAL seal) */
+  --tg-void: var(--bg);
+  --tg-panel: var(--panel);
+  --tg-panel-2: var(--panel2);
+  --tg-ink: var(--text);
+  --tg-muted: var(--muted);
+  --tg-seal: var(--amber);
+  --tg-seal-soft: var(--acid2);
+  --tg-line: var(--line);
+  --tg-line-strong: var(--line-strong);
+  --tg-ok: var(--ok);
+  --tg-danger: var(--red);
+  --tg-radius: var(--radius-hard);
+  --tg-radius-ctl: var(--radius-ctl);
+  --tg-mono: var(--mono);
+  --tg-sans: var(--sans);
+  --tg-serif: var(--serif);
 }
 * {
   box-sizing: border-box;
