@@ -731,3 +731,60 @@ footer a {
     animation: none !important;
   }
 }
+
+/* 2026-08-05 phone 320–430 + Apple a11y chrome · Time Gods CHRONAL */
+@media (max-width: 430px) {
+  html {
+    scroll-padding-top: calc(64px + env(safe-area-inset-top, 0px));
+  }
+  .masthead {
+    min-height: 0;
+    height: auto;
+    padding:
+      max(10px, env(safe-area-inset-top, 0px))
+      max(14px, env(safe-area-inset-right, 0px))
+      10px
+      max(14px, env(safe-area-inset-left, 0px));
+  }
+  main,
+  .hero,
+  section {
+    padding-inline: max(14px, env(safe-area-inset-left, 0px)) max(14px, env(safe-area-inset-right, 0px));
+  }
+  .button,
+  .actions .button,
+  a.button {
+    min-height: 44px;
+    width: 100%;
+  }
+  footer {
+    padding-bottom: max(28px, env(safe-area-inset-bottom, 0px));
+  }
+}
+@media (prefers-reduced-transparency: reduce) {
+  .masthead,
+  .panel,
+  .crypto-state,
+  dialog {
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    background: #090805;
+  }
+}
+@media (prefers-contrast: more) {
+  :root {
+    --muted: #c4baa6;
+    --line: rgba(244, 195, 106, 0.4);
+    --text: #f7f0e2;
+  }
+  .masthead,
+  .panel,
+  .crypto-state div {
+    border-color: var(--line);
+    background: #050505;
+  }
+  :focus-visible {
+    outline: 3px solid #f4c36a;
+    outline-offset: 3px;
+  }
+}
