@@ -1,0 +1,464 @@
+/* Continuity Bureau home — worldwide apolitical news */
+
+.bureau-home .alert-rail {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 18px;
+  align-items: center;
+  justify-content: center;
+  padding: 10px max(16px, env(safe-area-inset-right)) 10px max(16px, env(safe-area-inset-left));
+  border-bottom: 1px solid var(--line);
+  background: rgba(244, 195, 106, 0.06);
+  font: 600 10px/1.3 var(--mono);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.bureau-home .alert-rail strong {
+  color: var(--acid);
+  font-weight: 700;
+}
+
+.bureau-hero {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: clamp(24px, 4vw, 48px);
+  align-items: start;
+  padding: clamp(32px, 6vw, 72px) clamp(18px, 4vw, 68px) clamp(40px, 6vw, 80px);
+  border-bottom: 1px solid var(--line);
+}
+
+.bureau-hero .eyebrow {
+  margin: 0 0 12px;
+  font: 600 11px/1 var(--mono);
+  letter-spacing: 0.16em;
+  color: var(--acid);
+}
+
+.bureau-hero h1 {
+  margin: 0 0 18px;
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: clamp(2.4rem, 6vw, 3.6rem);
+  line-height: 1.08;
+  text-wrap: balance;
+}
+
+.bureau-hero h1 em {
+  font-style: italic;
+  color: var(--acid);
+}
+
+.bureau-hero .lede {
+  margin: 0 0 22px;
+  color: var(--muted);
+  font-size: 1.08rem;
+  max-width: 38rem;
+  text-wrap: pretty;
+}
+
+.bureau-hero .lede strong {
+  color: var(--text);
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0 20px;
+  border-radius: var(--radius-ctl);
+  border: 1px solid var(--line-strong);
+  font: 600 13px/1 var(--sans);
+  letter-spacing: 0.04em;
+}
+
+.button.primary {
+  background: linear-gradient(135deg, var(--acid), var(--acid2));
+  color: #0a0804;
+  border-color: transparent;
+}
+
+.button:hover {
+  filter: brightness(1.06);
+}
+
+.truth-label {
+  margin: 0 0 24px;
+  font: 500 11px/1.5 var(--mono);
+  color: var(--muted);
+  letter-spacing: 0.04em;
+}
+
+.truth-label span {
+  color: var(--acid);
+  margin-right: 8px;
+}
+
+.signoff {
+  margin: 0;
+  padding: 16px 18px;
+  border-left: 2px solid var(--acid);
+  background: rgba(244, 195, 106, 0.05);
+  max-width: 22rem;
+}
+
+.signoff p {
+  margin: 0 0 8px;
+  font-family: var(--serif);
+  font-size: 1.15rem;
+  font-style: italic;
+  line-height: 1.4;
+  color: var(--text);
+}
+
+.signoff cite {
+  font-style: normal;
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--acid);
+}
+
+.bureau-console {
+  border: 1px solid var(--line);
+  border-radius: var(--radius-hard);
+  background: var(--panel);
+  overflow: hidden;
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.4);
+}
+
+.bureau-console .console-head {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--line);
+  font: 600 10px/1 var(--mono);
+  letter-spacing: 0.1em;
+  color: var(--muted);
+}
+
+.bureau-console .console-head b {
+  color: var(--acid);
+}
+
+.desk-board {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  padding: 14px;
+}
+
+.desk-node {
+  min-height: 48px;
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-hard);
+  background: rgba(0, 0, 0, 0.25);
+  color: var(--text);
+  font: 600 12px/1.2 var(--sans);
+  text-align: left;
+  cursor: pointer;
+}
+
+.desk-node:hover,
+.desk-node.active {
+  border-color: var(--line-strong);
+  background: rgba(244, 195, 106, 0.1);
+  color: var(--acid);
+}
+
+.desk-node:focus-visible {
+  outline: 2px solid var(--acid);
+  outline-offset: 2px;
+}
+
+.bureau-console .console-readout {
+  padding: 14px;
+  border-top: 1px solid var(--line);
+  display: grid;
+  gap: 6px;
+}
+
+.bureau-console .console-readout span {
+  font-size: 0.92rem;
+  line-height: 1.4;
+}
+
+.bureau-console .console-readout small {
+  font: 600 9px/1 var(--mono);
+  letter-spacing: 0.1em;
+  color: var(--muted);
+}
+
+.ticker {
+  overflow: hidden;
+  border-bottom: 1px solid var(--line);
+  padding: 14px 0;
+  font: 600 11px/1 var(--mono);
+  letter-spacing: 0.12em;
+  color: var(--muted);
+}
+
+.ticker > div {
+  display: flex;
+  gap: 28px;
+  width: max-content;
+  animation: ticker-scroll 40s linear infinite;
+  padding-left: 100%;
+}
+
+.ticker i {
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--acid);
+  align-self: center;
+}
+
+@keyframes ticker-scroll {
+  to { transform: translateX(-50%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ticker > div { animation: none; padding-left: 18px; flex-wrap: wrap; width: auto; }
+}
+
+.section {
+  padding: clamp(40px, 7vw, 88px) clamp(18px, 4vw, 68px);
+  border-bottom: 1px solid var(--line);
+}
+
+.section-intro {
+  max-width: 40rem;
+  margin-bottom: 28px;
+}
+
+.section-intro .eyebrow {
+  margin: 0 0 10px;
+  font: 600 11px/1 var(--mono);
+  letter-spacing: 0.14em;
+  color: var(--acid);
+}
+
+.section-intro h2,
+.section h2 {
+  margin: 0 0 12px;
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  line-height: 1.15;
+}
+
+.section-copy {
+  margin: 0;
+  color: var(--muted);
+  text-wrap: pretty;
+}
+
+.section-copy .text-link,
+a.text-link {
+  color: var(--acid);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.space-top { margin-top: 20px; }
+
+.wire-grid,
+.desks-grid,
+.network-cards {
+  display: grid;
+  gap: 14px;
+}
+
+.wire-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.wire-card,
+.desks-grid article,
+.network-card {
+  padding: 18px 18px 20px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-hard);
+  background: var(--panel);
+}
+
+.wire-card .eyebrow,
+.network-card .eyebrow {
+  margin: 0 0 8px;
+  font: 600 10px/1 var(--mono);
+  letter-spacing: 0.12em;
+  color: var(--acid);
+}
+
+.wire-card h3,
+.desks-grid h3,
+.network-card h3 {
+  margin: 0 0 8px;
+  font-size: 1.1rem;
+}
+
+.wire-card p,
+.desks-grid p,
+.network-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+  text-wrap: pretty;
+}
+
+.desks-grid {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.standards-list {
+  margin: 0;
+  padding: 0 0 0 1.2rem;
+  max-width: 42rem;
+  display: grid;
+  gap: 14px;
+  color: var(--muted);
+}
+
+.standards-list strong {
+  color: var(--text);
+}
+
+.network-cards {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.network-card {
+  display: grid;
+  gap: 6px;
+  transition: border-color 0.15s ease;
+}
+
+.network-card:hover {
+  border-color: var(--line-strong);
+}
+
+.card-go {
+  margin-top: 10px;
+  font: 600 11px/1 var(--mono);
+  letter-spacing: 0.08em;
+  color: var(--acid);
+}
+
+.signoff-section {
+  text-align: center;
+}
+
+.signoff-block {
+  max-width: 28rem;
+  margin: 0 auto;
+}
+
+.signoff-letter {
+  font-family: var(--serif);
+  font-size: clamp(1.4rem, 3vw, 1.85rem);
+  font-style: italic;
+  line-height: 1.35;
+  margin: 0 0 12px;
+}
+
+.signoff-name {
+  margin: 0 0 12px;
+  font: 700 14px/1 var(--mono);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--acid);
+}
+
+.signoff-meta {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.site-footer {
+  padding: 40px clamp(18px, 4vw, 68px) 48px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 28px;
+}
+
+.footer-grid strong {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 0.85rem;
+  letter-spacing: 0.06em;
+}
+
+.footer-grid p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.footer-grid a {
+  display: block;
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin-bottom: 6px;
+  min-height: 28px;
+}
+
+.footer-grid a:hover {
+  color: var(--acid);
+}
+
+.footer-fine {
+  margin: 0;
+  font-size: 0.78rem;
+  color: var(--muted);
+  border-top: 1px solid var(--line);
+  padding-top: 18px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+@media (max-width: 960px) {
+  .bureau-hero,
+  .wire-grid,
+  .network-cards,
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+  .desks-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .topbar nav {
+    display: none;
+  }
+}
+
+@media (max-width: 560px) {
+  .desks-grid {
+    grid-template-columns: 1fr;
+  }
+}

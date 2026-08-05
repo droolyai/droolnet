@@ -1,11 +1,11 @@
 {
   "name": "Continuity Bureau",
   "short_name": "Bureau",
-  "description": "The public chronology terminal for WOKE.NET continuity research.",
+  "description": "Worldwide apolitical organized news. Receipts over rants. Bigger than any chain.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#060705",
-  "theme_color": "#060705",
+  "background_color": "#050505",
+  "theme_color": "#050505",
   "icons": [
     {
       "src": "/assets/continuity-bureau-mark-v3-128.png",
