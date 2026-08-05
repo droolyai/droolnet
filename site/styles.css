@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=Space+Grotesk:wght@400;500;600;700&display=swap');
 :root {
   --bg: #050505;
   --panel: #0c0b09;
@@ -13,7 +13,8 @@
   --text: #f2ead7;
   --muted: #9a9180;
   --mono: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-  --sans: Inter, system-ui, sans-serif;
+  /* Time Gods stack: Space Grotesk (not Inter default-type slop) — parity with newsroom */
+  --sans: 'Space Grotesk', 'Helvetica Neue', Helvetica, Arial, system-ui, sans-serif;
   --serif: 'Instrument Serif', Iowan Old Style, Baskerville, 'Times New Roman', Georgia, serif;
   --radius-hard: 3px;
   --radius-ctl: 999px;
