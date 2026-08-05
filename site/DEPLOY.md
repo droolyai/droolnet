@@ -6,7 +6,7 @@
 
 ## Why live may lag
 
-Dogfood (through 2026-08-05T16:45Z) showed edge still serving **pre–Time Gods** WOKE.NET terminal HTML (`styles.css?v=20260804-3`, “WOKE.SOCIAL / PUBLIC RESEARCH TERMINAL”) while this folder already has CHRONAL chrome (`tg-seal-chronal`, `CB–01`, cache `styles.css?v=20260805-tg-chronal3`, Space Grotesk sans — not Inter).
+Dogfood (through 2026-08-05T16:45Z) showed edge still serving **pre–Time Gods** WOKE.NET terminal HTML (`styles.css?v=20260804-3`, “WOKE.SOCIAL / PUBLIC RESEARCH TERMINAL”) while this folder already has CHRONAL chrome (`tg-seal-chronal`, `CB–01`, cache `styles.css?v=20260805-tg-chronal4`, Space Grotesk sans — not Inter; phone 430 + reduced-transparency/contrast parity).
 
 Common causes:
 
