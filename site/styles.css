@@ -1932,3 +1932,200 @@ body::before {
     border-bottom: 1px solid var(--line);
   }
 }
+
+/* 2026-08-05 phone width — Apple 320–430 · Time Gods CHRONAL (parity icefam SIGNAL / drooly MIND) */
+@media (max-width: 430px) {
+  html {
+    scroll-padding-top: calc(66px + 34px + env(safe-area-inset-top, 0px));
+  }
+
+  #top,
+  main,
+  section[id],
+  .hero {
+    scroll-margin-top: calc(66px + 34px + env(safe-area-inset-top, 0px));
+  }
+
+  .topbar {
+    height: auto;
+    min-height: 60px;
+    padding:
+      max(10px, env(safe-area-inset-top, 0px))
+      max(14px, env(safe-area-inset-right, 0px))
+      10px
+      max(14px, env(safe-area-inset-left, 0px));
+  }
+
+  .brand {
+    gap: 10px;
+  }
+
+  img.brand-mark {
+    width: 32px;
+    height: 32px;
+  }
+
+  .brand strong {
+    font-size: 11px;
+    letter-spacing: 0.12em;
+  }
+
+  .brand small {
+    font-size: 8px;
+    letter-spacing: 0.1em;
+  }
+
+  .alert-rail,
+  .tg-alert-rail {
+    min-height: 34px;
+    padding: 8px max(14px, env(safe-area-inset-right, 0px)) 8px max(14px, env(safe-area-inset-left, 0px));
+    font-size: 9px;
+    letter-spacing: 0.08em;
+    line-height: 1.35;
+  }
+
+  .alert-rail strong,
+  .tg-alert-rail strong {
+    font-size: 9px;
+  }
+
+  .hero {
+    min-height: auto;
+    gap: 28px;
+    padding-top: 36px;
+    padding-bottom: 40px;
+    padding-inline: max(14px, env(safe-area-inset-left, 0px)) max(14px, env(safe-area-inset-right, 0px));
+  }
+
+  .hero::before {
+    font-size: clamp(64px, 22vw, 110px);
+    opacity: 0.9;
+  }
+
+  .hero-classification {
+    margin-top: 10px;
+    font-size: 8px;
+    letter-spacing: 0.1em;
+    line-height: 1.45;
+    overflow-wrap: anywhere;
+    max-width: 100%;
+  }
+
+  .hero h1 {
+    max-width: none;
+    margin-top: 14px;
+    margin-bottom: 12px;
+    font-size: clamp(42px, 13.5vw, 56px);
+    line-height: 0.9;
+    letter-spacing: -0.04em;
+  }
+
+  .hero-command {
+    font-size: 9px;
+    letter-spacing: 0.14em;
+    line-height: 1.4;
+  }
+
+  .lede {
+    font-size: 15px;
+    line-height: 1.55;
+    max-width: none;
+  }
+
+  .hero-actions {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin-top: 18px;
+    margin-bottom: 18px;
+  }
+
+  .button {
+    width: 100%;
+    min-height: 44px;
+  }
+
+  .topbar nav a {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .network-console {
+    width: 100%;
+    max-width: none;
+  }
+
+  .public-desk-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .public-desk-card {
+    min-height: 0;
+    padding: 18px 16px;
+  }
+
+  .clock-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  footer {
+    padding-bottom: max(28px, env(safe-area-inset-bottom, 0px));
+  }
+}
+
+/* Apple-style accessibility chrome (parity with icefam / drooly) */
+@media (prefers-reduced-transparency: reduce) {
+  .topbar {
+    background: rgba(5, 5, 5, 0.98);
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
+
+  .network-console,
+  .evidence-terminal,
+  .public-desk-card {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+}
+
+@media (prefers-contrast: more) {
+  :root {
+    --muted: #c4baa6;
+    --line: rgba(244, 195, 106, 0.4);
+    --line-strong: rgba(244, 195, 106, 0.66);
+    --acid: #f8d48a;
+    --amber: #f8d48a;
+    --text: #f7f0e2;
+  }
+
+  body {
+    background: #050505;
+  }
+
+  .topbar {
+    border-bottom-color: var(--line-strong);
+    background: #050505;
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
+
+  :focus-visible {
+    outline-width: 3px;
+    outline-offset: 3px;
+  }
+
+  .button,
+  .public-desk-card,
+  .network-console,
+  .research-status,
+  .header-status {
+    border-color: var(--line-strong);
+  }
+
+  .truth-label {
+    border-left-width: 4px;
+  }
+}
