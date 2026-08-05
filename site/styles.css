@@ -1285,7 +1285,7 @@ img.brand-mark {
 
 .public-desk-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: minmax(0, 1.28fr) minmax(0, 0.92fr);
   gap: 14px;
   max-width: 1400px;
   margin: 0 auto;
@@ -1297,6 +1297,18 @@ img.brand-mark {
   border: 1px solid var(--line);
   background: rgba(18, 17, 12, 0.86);
   transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
+}
+
+/* Primary desk weight — newsroom leads; secure-drop is secondary (anti equal-tile slop) */
+.public-desk-card.newsroom-card {
+  background:
+    linear-gradient(160deg, rgba(244, 195, 106, 0.08), transparent 46%),
+    rgba(18, 17, 12, 0.9);
+  box-shadow: 0 22px 56px rgba(0, 0, 0, 0.35);
+}
+
+.public-desk-card.newsroom-card > strong {
+  font-size: clamp(32px, 4vw, 62px);
 }
 
 .public-desk-card:hover {
