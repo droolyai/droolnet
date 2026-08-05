@@ -1190,6 +1190,10 @@ footer nav {
   .research-status i {
     animation: none !important;
   }
+  .button:hover,
+  .public-desk-card:hover {
+    transform: none;
+  }
 }
 
 /* Canonical WOKE.NET mark and ecosystem navigation. */
