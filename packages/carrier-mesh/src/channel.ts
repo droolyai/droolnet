@@ -120,10 +120,7 @@ class InMemoryDuplexChannel implements DuplexPeerChannel {
   }
 }
 
-export function createInMemoryChannelPair(
-  peerIdA: string,
-  peerIdB: string,
-): InMemoryChannelPair {
+export function createInMemoryChannelPair(peerIdA: string, peerIdB: string): InMemoryChannelPair {
   if (peerIdA === peerIdB) {
     throw new ChannelError('self_link', 'A channel pair needs two distinct peer ids.');
   }

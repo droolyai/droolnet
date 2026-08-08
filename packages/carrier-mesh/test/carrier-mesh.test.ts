@@ -99,7 +99,13 @@ describe('carrier-mesh 2-node loopback', () => {
     const { alice, bob, spaceKey, aliceStore, bobStore } = node;
 
     const root = change(alice, spaceKey, 'root', [], '2026-08-04T15:00:00.000Z');
-    const fromAlice = change(alice, spaceKey, 'from-alice', [root.changeId], '2026-08-04T15:01:00.000Z');
+    const fromAlice = change(
+      alice,
+      spaceKey,
+      'from-alice',
+      [root.changeId],
+      '2026-08-04T15:01:00.000Z',
+    );
     const fromBob = change(bob, spaceKey, 'from-bob', [root.changeId], '2026-08-04T15:01:00.000Z');
 
     // Shared root; each node then authors one child the other has never seen.
