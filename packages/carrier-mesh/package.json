@@ -1,0 +1,31 @@
+{
+  "name": "@wokenet/carrier-mesh",
+  "version": "0.1.0",
+  "private": false,
+  "description": "License-clean transport carrier that drives @wokenet/sync-core's authenticated handshake and anti-entropy replication over any injected duplex peer channel",
+  "license": "SEE LICENSE IN LICENSE",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/src/index.d.ts",
+      "import": "./dist/src/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "clean": "rm -rf dist coverage",
+    "lint": "eslint src test",
+    "test": "vitest run --exclude 'dist/**'",
+    "test:coverage": "vitest run --coverage --exclude 'dist/**'",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "@wokenet/sync-core": "workspace:*"
+  },
+  "devDependencies": {
+    "vitest": "4.1.10"
+  }
+}

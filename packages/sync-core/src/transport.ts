@@ -582,7 +582,9 @@ export const TRANSPORT_CONTRACT = Object.freeze({
   replayProtection: 'nonce window plus monotonic frame sequence',
   payloadEncryption: 'encrypted changes only',
   carrierEncryptionRequired: true,
-  carriersImplemented: [],
+  carriersImplemented: [
+    '@wokenet/carrier-mesh in-memory loopback: authenticated frame carrier + anti-entropy replication over an injected duplex transport, verified in a 2-node test. Test harness only — not a production wire carrier and provides no transport-layer encryption.',
+  ],
   libp2pNoiseCarrier: 'not_implemented',
   webTransportCarrier: 'not_implemented',
   relayAndNatTraversal: 'not_implemented',
