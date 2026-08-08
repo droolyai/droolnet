@@ -31,6 +31,14 @@ export default tseslint.config(
     },
   },
   {
+    // site/ ships browser scripts (DOM-driven pages), not Node — they need
+    // window/document/HTMLElement globals same as .ts files already get below.
+    files: ['site/**/*.{js,mjs,cjs}'],
+    languageOptions: {
+      globals: globals.browser,
+    },
+  },
+  {
     files: ['**/*.{ts,tsx}'],
     languageOptions: {
       ecmaVersion: 'latest',

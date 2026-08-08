@@ -1,7 +1,5 @@
 'use strict';
 
-/* global document */
-
 const nodes = document.querySelectorAll('.node');
 const readout = document.querySelector('#node-readout');
 
