@@ -70,3 +70,9 @@ for recipients who obtained them while MIT applied; **current default-branch
 code is dual-licensed.**
 
 By contributing, you accept the CLA terms in [`LICENSE`](LICENSE).
+
+## Support the studio
+
+Drooly ships free, open, web-first software from a one-person studio. If you want it to
+keep existing, you can tip at **[drooly.ai/support](https://drooly.ai/support)** — card or
+BTC/ETH/SOL. A tip grants nothing: no perks, no credits, no priority. That is the whole deal.
